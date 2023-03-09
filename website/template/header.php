@@ -25,6 +25,9 @@ if (isset($_SESSION['user'])) {
     setInterval(checkActivity, 600 * 1000);
     </script>
     <?php
+}else if(!isset($_SESSION['user']) and ($_SERVER['REQUEST_URI'] != "/index.php" and $_SERVER['REQUEST_URI'] != "/" and $_SERVER['REQUEST_URI'] != "/connect.php")){
+  echo $_SERVER['REQUEST_URI'];
+  header('Location: https://ovl.tech-user.fr:7070/');
 }
 ?>
 
@@ -41,7 +44,14 @@ if (isset($_SESSION['user'])) {
   <div class="container-fluid">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="https://ovl.tech-user.fr:7070/index.php">Accueil</a>
+    <a class="navbar-brand" href="https://ovl.tech-user.fr:7070/index.php">
+    <img
+        src="https://ovl.tech-user.fr:7070/img/OVL_Logo.png"
+        class="me-2"
+        height="40"
+        loading="lazy"
+      />  
+    Accueil</a>
 
     <!-- Toggle button -->
     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
