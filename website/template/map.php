@@ -10,7 +10,7 @@ $extract_pos = $parsed_history->{'history'};
     <?php
     if (isset($_GET['pos'])) {
         $pos = $_GET["pos"];
-    ?>
+        ?>
 
         var map = L.map('map').setView([<?php echo $extract_pos[$pos]->{'lat'} ?>, <?php echo $extract_pos[$pos]->{'lon'} ?>], 20); //MODIFIER COORDS ICI
 
@@ -27,9 +27,9 @@ $extract_pos = $parsed_history->{'history'};
             radius: 500
         }).addTo(map);
 
-    <?php
+        <?php
     } else {
-    ?>
+        ?>
         var map = L.map('map').setView([0, 0], 2); //MODIFIER COORDS ICI
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -48,15 +48,15 @@ $extract_pos = $parsed_history->{'history'};
 
         <?php
         for ($i = 0; $i < count($extract_pos); $i++) {
-        ?>
-            var temp = [<?php echo $extract_pos[$i]->{'lat'} ?>,<?php echo $extract_pos[$i]->{'lon'} ?>]; 
+            ?>
+            var temp = [<?php echo $extract_pos[$i]->{'lat'} ?>, <?php echo $extract_pos[$i]->{'lon'} ?>];
             latlngs.push(temp);
-        
+
             var marker = L.marker([<?php echo $extract_pos[$i]->{'lat'} ?>, <?php echo $extract_pos[$i]->{'lon'} ?>]).addTo(map); //COORDS D'UN POINT SUR LA CARTE
-    <?php
+            <?php
         }
         ?>
-        var aPolyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+        var aPolyline = L.polyline(latlngs, { color: 'red' }).addTo(map);
         map.fitBounds(aPolyline.getBounds());
         <?php
     }

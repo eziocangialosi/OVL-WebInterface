@@ -37,21 +37,24 @@ $pos = $_GET["pos"];
     <br>
     <?php if (isset($_SESSION['user'])) { ?>
         <h1 style="text-align: center">Historique</h1>
-
-        <div class="row mb-5 history">
-            <div class="col mt-5">
-                <div class="img-fluid">
-                    <div id="map" style="min-height: 700px"></div>
+        <?php if ($parsed_history->{'error'}->{'Code'} == 0) { ?>
+            <div class="row mb-5 history">
+                <div class="col mt-5">
+                    <div class="img-fluid">
+                        <div id="map" style="min-height: 700px"></div>
+                    </div>
+                </div>
+                <div class="col mt-5">
+                    <?php printPos($history, $parsed_history); ?>
                 </div>
             </div>
-            <div class="col mt-5">
-                <?php printPos($history, $parsed_history); ?>
-            </div>
-        </div>
-    <?php
+            <?php
+        }
+        include('../template/param.php');
+        include('../template/map.php');
+    } else {
+        echo $parsed_history->{'error'}->{'Message'};
     }
-    include('../template/param.php');
-    include('../template/map.php');
     include('../template/footer.php');
     ?>
 
