@@ -43,7 +43,7 @@ require_once('tests_unit.php');
                 <div class="card-body">
                     <h5 class="card-title">Utilisateurs</h5>
                     <p class="card-text">Obtenir un jeton api à partir d'un mail et d'un mot de passe.</p>
-                    <a href="#stat_list"><button type="button" class="btn btn-primary">Voir</button></a>
+                    <a href="#verify_users"><button type="button" class="btn btn-primary">Voir</button></a>
                     <button type="button" class="btn btn-primary">Télécharger</button>
                 </div>
             </div>
@@ -54,7 +54,7 @@ require_once('tests_unit.php');
                     <h5 class="card-title">Liste Position</h5>
                     <p class="card-text">Obtenir l'historique de toutes les positions d'un tracker en fonction de son identifiant.<br>
                 </p>
-                    <a href="#historique_position"><button type="button" class="btn btn-primary">Voir</button></a>
+                    <a href="#getPos"><button type="button" class="btn btn-primary">Voir</button></a>
                     <button type="button" class="btn btn-primary">Télécharger</button>
                 </div>
             </div>
@@ -62,7 +62,7 @@ require_once('tests_unit.php');
                 <div class="card-body">
                     <h5 class="card-title">Position Now</h5>
                     <p class="card-text">Obtenir la position actuelle du tracker en fonction de son identifiant.</p>
-                    <button type="button" class="btn btn-primary">Voir</button>
+                    <a href="#getPosNow"><button type="button" class="btn btn-primary">Voir</button></a>
                     <button type="button" class="btn btn-primary">Télécharger</button>
                 </div>
             </div>
@@ -83,10 +83,12 @@ require_once('tests_unit.php');
         getIOT();
         getStatus();
         getPos();
+        getUser();
+        getPosNow();
     ?>
     <!-- Include footer.php in the body -->
     <?php
-        include('https://ovl.tech-user.fr:7070/template/footer.php');
+        include('../template/footer.php');
     ?>
 </body>
 
