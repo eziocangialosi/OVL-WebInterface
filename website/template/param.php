@@ -21,7 +21,7 @@
                 <div class="card-body py-5 px-md-5">
                     <h2 class="fw-bold mb-5">Status</h2>
                     <div class="col" style="max-width: 500px; margin: auto;">
-                        <h4>Charge Batterie</h4>
+                        <h4>Battery Charge</h4>
                         <div class="progress" style="height: 20px;">
                             <div class="progress-bar" role="progressbar"
                                 style="width: <?php echo $parsed_status_list->{'status_list'}[$iot - 1]->{"status_bat"}; ?>%;"
@@ -38,7 +38,7 @@
                         <?php
                         } else {
                             ?>
-                            <i class="fa-solid fa-xmark"></i> Ofline !
+                            <i class="fa-solid fa-xmark"></i> Offline !
                         <?php
                         }
                         ?>
@@ -57,7 +57,7 @@
                 <div class="card-body py-5 px-md-5">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h2 class="fw-bold mb-5">Paramètres</h2>
+                            <h2 class="fw-bold mb-5">Parameters</h2>
                             <form action="../php/paramPost.php?iot=<?php echo $iot; ?>" method="POST">
                                 <?php
                                 for ($i = 2; $i < 6; $i++) {
@@ -106,7 +106,7 @@
                                 ?>
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4">
-                                    Valider les Changements
+                                    validate changes
                                 </button>
                             </form>
                         </div>
@@ -121,9 +121,10 @@
 <?php
 if (isset($_GET['modif'])) {
     ?>
-    <div class="alert alert-success mt-4 mb-4" role="alert">
-        Modifications réussie !
-    </div>
+    <div class="alert alert-success mt-4 mb-4 alert_test alert-dismissible" role="alert">
+    Successful modification!
+            <a href="#" class="close" data-dismiss="alert" style="margin-left: 20px; margin-right: 20px"aria-label="close"><i class="fa-solid fa-xmark"></i></a>
+            </div>
 <?php } ?>
 <?php
 ?>

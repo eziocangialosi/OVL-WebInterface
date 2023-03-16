@@ -1,13 +1,13 @@
 <?php
     function getIOT()
     {
-        $link = "https://ovl.tech-user.fr:6969/lazy/position/history/42/";
+        $link = "https://ovl.tech-user.fr:6969/lazy/iot_list/UnToken";
         $iot_list = file_get_contents($link);
         $iot_list_decode = json_decode($iot_list);
 
         # start of HTML table creation
         echo "<br>";
-        echo "<table class='table table-bordered table_modify container-xxl mt-5 mb-5' id=''>";
+        echo "<table class='table table-bordered table_modify container-xxl mt-5 mb-5' id='history'>";
         echo     "<thead class='table-dark table_modify'>";
         echo         "<th scope='col'>GET</th>";
         echo         "<th scope='col' style='text-align:center'>".$link."</th>";
@@ -26,12 +26,12 @@
 
         echo "<tr>";
         echo "<td>Extract exemple</td>";
-        echo "<td>\$json_decode->{'history'}[1]->{'lat'}</td>";
+        echo "<td>\$json_decode->{'trackers'}[1]->{'name'}</td>";
         echo "</tr>";   
 
         echo "<tr>";
         echo "<td>Result</td>";
-        echo "<td>".$iot_list_decode->{'history'}[1]->{'lat'}."</td>";
+        echo "<td>".$iot_list_decode->{'trackers'}[1]->{'name'}."</td>";
         echo "</tr>";   
 
         # end of table

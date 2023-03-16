@@ -36,7 +36,7 @@ require_once('tests_unit.php');
                     <h5 class="card-title">Liste IOT</h5>
                     <p class="card-text">Obtenir la liste des trackers pour l'utilisateur à partir de son jeton.</p>
                     <a href="#history"><button type="button" class="btn btn-primary">Voir</button></a>
-                    <button type="button" class="btn btn-primary">Télécharger</button>
+                    <a href="#history"><button type="button" class="btn btn-primary">Télécharger</button></a>
                 </div>
             </div>
             <div class="card m-3">
@@ -44,7 +44,7 @@ require_once('tests_unit.php');
                     <h5 class="card-title">Utilisateurs</h5>
                     <p class="card-text">Obtenir un jeton api à partir d'un mail et d'un mot de passe.</p>
                     <a href="#verify_users"><button type="button" class="btn btn-primary">Voir</button></a>
-                    <button type="button" class="btn btn-primary">Télécharger</button>
+                    <a href="#verify_users"><button type="button" class="btn btn-primary">Télécharger</button></a>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@ require_once('tests_unit.php');
                     <p class="card-text">Obtenir l'historique de toutes les positions d'un tracker en fonction de son identifiant.<br>
                 </p>
                     <a href="#getPos"><button type="button" class="btn btn-primary">Voir</button></a>
-                    <button type="button" class="btn btn-primary">Télécharger</button>
+                    <a href="#getPos"><button type="button" class="btn btn-primary">Télécharger</button></a>
                 </div>
             </div>
             <div class="card m-3">
@@ -63,7 +63,7 @@ require_once('tests_unit.php');
                     <h5 class="card-title">Position Now</h5>
                     <p class="card-text">Obtenir la position actuelle du tracker en fonction de son identifiant.</p>
                     <a href="#getPosNow"><button type="button" class="btn btn-primary">Voir</button></a>
-                    <button type="button" class="btn btn-primary">Télécharger</button>
+                    <a href="#getPosNow"><button type="button" class="btn btn-primary">Télécharger</button></a>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@ require_once('tests_unit.php');
                     <h5 class="card-title">Liste Status</h5>
                     <p class="card-text">Obtenir la liste d'état de tous les trackers de l'utilisateur à partir de son jeton.</p>
                     <a href="#stat_list"><button type="button" class="btn btn-primary">Voir</button></a>
-                    <button type="button" class="btn btn-primary">Télécharger</button>
+                    <a href=""><button type="button" class="btn btn-primary">Télécharger</button></a>
                 </div>
             </div>
         </div>

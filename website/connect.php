@@ -16,22 +16,28 @@
     switch($_GET['connexion']){
         case 1:
             ?>
-            <div class="alert alert-danger p-auto mt-4" role="alert">
-                Mot de Passe incorrect !
+            <div class="alert alert-danger mt-4 mb-4 alert_test alert-dismissible" role="alert">
+            Wrong Password !
+            <a href="#" class="close" data-dismiss="alert" style="margin-left: 20px; margin-right: 20px"aria-label="close"><i class="fa-solid fa-xmark"></i></a>
             </div>
+        </div>
             <?php
             break;
         case 2:
             ?>
-            <div class="alert alert-danger p-auto mt-4" role="alert">
-                Email incorrect !
+
+            <div class="alert alert-danger mt-4 mb-4 alert_test alert-dismissible" role="alert">
+            Wrong Email !
+            <a href="#" class="close" data-dismiss="alert" style="margin-left: 20px; margin-right: 20px"aria-label="close"><i class="fa-solid fa-xmark"></i></a>
             </div>
+        </div>
             <?php
             break;
         case 3:
             ?>
-            <div class="alert alert-success p-auto mt-4" role="alert">
-                Déconnecter avec succès !
+            <div class="alert alert-success mt-4 mb-4 alert_test alert-dismissible" role="alert">
+            Successfully disconnect !
+            <a href="#" class="close" data-dismiss="alert" style="margin-left: 20px; margin-right: 20px"aria-label="close"><i class="fa-solid fa-xmark"></i></a>
             </div>
             <?php
             break;

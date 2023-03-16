@@ -36,7 +36,7 @@ $pos = $_GET["pos"];
     ?>
     <br>
     <?php if (isset($_SESSION['user'])) { ?>
-        <h1 style="text-align: center">Historique</h1>
+        <h1 style="text-align: center">Position History</h1>
         <?php if ($parsed_history->{'error'}->{'Code'} == 0) { ?>
             <div class="row mb-5 history">
                 <div class="col mt-5">

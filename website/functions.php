@@ -18,7 +18,7 @@
             echo "<table class='table table_modify container-xxl mt-5 mb-5'>";
             echo     "<thead class='table-dark table_modify'>";
             echo         "<th scope='col'>#</th>";
-            echo         "<th scope='col'>Nom</th>";
+            echo         "<th scope='col'>Name</th>";
             echo         "<th scope='col'>Status</th>";
             echo         "<th scope='col'>PosX</th>";
             echo         "<th scope='col'>PosY</th>";
@@ -40,7 +40,7 @@
                 {
                     echo "<td><i class='fa-solid fa-check'></i> Online !</td>";
                 }else{
-                    echo "<td><i class='fa-solid fa-xmark'></i> Ofline !</td>";
+                    echo "<td><i class='fa-solid fa-xmark'></i> Offline !</td>";
                 }
                 
                 # get historical data for the current IoT device
@@ -53,14 +53,14 @@
                     echo "<td>", end($parsed_history->{'history'})->{'lon'}, "</td>" ;
                     # link to view IoT device history
                     echo "<td><a href='/iot/historique.php?iot=",  ($i+1),  "'>",
-                    "<button type='button' class='btn button_modify'>  Voir ",
+                    "<button type='button' class='btn button_modify'>  See ",
                     "</button></a></td>";
                     echo "</tr>";
                 }else{
                     # repeat tracker name as X,Y position data is missing 
                     echo "<td> NaN </td>" ;
                     echo "<td> NaN </td>" ;
-                    echo "<td><button type='button' class='btn button_modify' disabled>  Voir ",
+                    echo "<td><button type='button' class='btn button_modify' disabled>  See ",
                     "</button></td>";
                     echo "</tr>";
                 }
@@ -111,7 +111,7 @@
                         <td> <?php echo date('d/m/Y H:i',$parsed_history->{'history'}[$i-1]->{'timestamp'}), '   ';?> </td> 
                         <td> <?php if(isset($parsed_history->{'history'}[$i-1]->{'lat'})) echo $parsed_history->{'history'}[$i-1]->{'lat'}, '   '; else echo "NaN" ?> </td> 
                         <td> <?php if(isset($parsed_history->{'history'}[$i-1]->{'lon'}))echo $parsed_history->{'history'}[$i-1]->{'lon'}, '   '; else echo "NaN"?> </td>
-                        <td> <a href="/iot/historique.php?iot=<?php echo $iot ?>&pos=<?php echo $i-1 ?>"> <button type="button" class="btn button_modify">  Voir </button> </a> </td>
+                        <td> <a href="/iot/historique.php?iot=<?php echo $iot ?>&pos=<?php echo $i-1 ?>"> <button type="button" class="btn button_modify">  See </button> </a> </td>
                         </tr> <?php 
                     } 
                     ?>
@@ -119,7 +119,7 @@
             </table>
             <!-- "Global" and "Exporter" buttons --> 
             <a href="/iot/historique.php?iot=<?php echo $iot ?>"> <button type="button" class="btn button_modify">  Global </button> </a>
-            <a href="/iot/historique.php?iot=<?php echo $iot?>"> <button type="button" class="btn button_modify">  Exporter </button> </a> 
+            <a href="/iot/historique.php?iot=<?php echo $iot?>"> <button type="button" class="btn button_modify">  Export </button> </a> 
             <?php
         }else{
             echo $parsed_history->{'error'}->{'Message'};

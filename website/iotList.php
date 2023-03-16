@@ -18,15 +18,17 @@
     ?>
     <?php if (isset($_SESSION['user'])) { ?>
     <br>
-    <h1 style="text-align: center">Liste des Traqueurs</h1>
+    <h1 style="text-align: center">Trackeurs List</h1>
     <?php
         printIOT();
 
         if(isset($_GET['connexion']))
         {
         ?>
-        <div class="alert alert-success mt-4 mb-4" role="alert">
-            Connexion réussie !
+        <div class="alert alert-success mt-4 mb-4 alert_test alert-dismissible" role="alert">
+            Login Successfully !
+            <a href="#" class="close" data-dismiss="alert" style="margin-left: 20px; margin-right: 20px"aria-label="close"><i class="fa-solid fa-xmark"></i></a>
+            </div>
         </div>
         <?php } ?>
         <?php

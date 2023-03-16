@@ -3,14 +3,27 @@
     --rose-fonce-pastel: #9F496E;
     --violet-pastel: #647295;
     --noir-pastel: #392840;
-    --blanc-pastel: #F2EBE5;
+    --blanc-pastel: #0e0600;
 }
 
+body{
+    font-family: 'Space Grotesk', sans-serif !important;
+    background-color: var(--blanc-pastel);
+}
 
 .navbar_modify{
     background-color: var(--noir-pastel) !important;
     --bs-navbar-color : white !important;
     --bs-navbar-hover-color : var(--rose-fonce-pastel) !important;
+}
+
+.alert_test{
+    position: fixed; 
+    top: 60px; 
+    right: 40px;
+    width: auto !important;
+    padding-right: 0px !important;
+
 }
 
 .table_modify{
