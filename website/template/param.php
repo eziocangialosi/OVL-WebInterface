@@ -1,6 +1,6 @@
 <div class="container-fluid mb-5 container_status">
     <?php
-    $status_list = file_get_contents("https://ovl.tech-user.fr:6969/status_list/" . $_SESSION["user"]["token"]);
+    $status_list = file_get_contents($API_link ."/status_list/" . $_SESSION["user"]["token"]);
     $parsed_status_list = json_decode($status_list);
 
     $tab = array(1 => "status_charge", 2 => "status_alarm", 3 => "status_ecomode", 4 => "status_protection", 5 => "status_vh_charge", 6 => "status_gps");
@@ -9,7 +9,7 @@
 </div>
 
 <!-- Section: Design Block -->
-<section class="text-center param pb-5 pt-5" id="param">
+<section class="text-center param pb-5 pt-5 " id="param">
     <div class="row" style="margin-right: 0 !important;">
         <div class="col-sm-6">
             <div class="card mb-5 mt-5 mx-4 mx-md-auto shadow-5-strong" style="
@@ -18,7 +18,7 @@
                 backdrop-filter: blur(30px);
                 max-width: 850px;
                 ">
-                <div class="card-body py-5 px-md-5">
+                <div class="card-body card_modify py-5 px-md-5">
                     <h2 class="fw-bold mb-5">Status</h2>
                     <div class="col" style="max-width: 500px; margin: auto;">
                         <h4>Battery Charge</h4>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="col-sm-6">
-            <div class="card mb-5 mt-5 mx-4 mx-md-auto shadow-5-strong col" style="
+            <div class="card mb-5 mt-5 mx-4 card_modify mx-md-auto shadow-5-strong col" style="
                 margin-top: -100px;
                 background: hsla(0, 0%, 100%, 0.8);
                 backdrop-filter: blur(30px);
@@ -105,7 +105,7 @@
 
                                 ?>
                                 <!-- Submit button -->
-                                <button type="submit" class="btn btn-primary btn-block mb-4">
+                                <button type="submit" class="btn btn-primary btn-block mb-4 button_modify">
                                     validate changes
                                 </button>
                             </form>

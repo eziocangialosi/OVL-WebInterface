@@ -14,7 +14,7 @@
         max-width: 900px;
         ">
     <!--Card body with form -->
-    <div class="card-body py-5 px-md-5">
+    <div class="card-body py-5 px-md-5 card_modify">
       <div class="row d-flex justify-content-center">
         <!-- Login form -->
         <div class="col-lg-8">
@@ -34,7 +34,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">
+            <button type="submit" class="btn btn-primary btn-primary btn-block mb-4 button_modify">
               Login
             </button>
           </form>

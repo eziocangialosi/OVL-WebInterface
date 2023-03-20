@@ -1,20 +1,32 @@
 :root{
-    --rose-clair-pastel: #803F5B;
-    --rose-fonce-pastel: #9F496E;
-    --violet-pastel: #647295;
-    --noir-pastel: #392840;
-    --blanc-pastel: #0e0600;
+    --array-color: #333333;
+    --hover-color: #4A90E2;
+    --navbar-color: #333333;
+    --violet-pastel: #282828;
+    --noir-pastel: #282828;
+    --blanc-pastel: #1A1A1A;
 }
 
 body{
     font-family: 'Space Grotesk', sans-serif !important;
     background-color: var(--blanc-pastel);
+    color: #FFFFFF !important;
+    border-color: #444444 !important;
+}
+
+button{
+    background-color: #666666 !important;
 }
 
 .navbar_modify{
     background-color: var(--noir-pastel) !important;
     --bs-navbar-color : white !important;
-    --bs-navbar-hover-color : var(--rose-fonce-pastel) !important;
+    --bs-navbar-hover-color : var(--navbar-color) !important;
+}
+
+.card_modify{
+    background-color: var(--array-color)!important;
+    border-radius: var(--bs-card-border-radius) !important;
 }
 
 .alert_test{
@@ -27,19 +39,18 @@ body{
 }
 
 .table_modify{
-    --mdb-table-bg: var(--rose-fonce-pastel)!important;
+    --mdb-table-bg: var(--array-color)!important;
     --bs-table-border-color: var(--blanc-pastel)!important;
     color: white !important;
-    --mdb-table-border-color: white !important;
-}
+    --mdb-table-border-color: white !important;}
 
 .button_modify{
-    background-color: white !important;
-    color: var(--rose-clair-pastel) !important;
+    color: white !important;
+    box-shadow: none !important;
 }
 
 .button_modify:hover{
-    background-color: var(--rose-clair-pastel) !important;
+    background-color: var(--hover-color) !important;
     color: white !important;
 }
 

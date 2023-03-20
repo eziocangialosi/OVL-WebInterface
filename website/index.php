@@ -1,9 +1,5 @@
-<?php
-// include functions.php file
-require_once('functions.php');
-?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +15,7 @@ require_once('functions.php');
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <!-- Set title of the page -->
-    <title>Accueil</title>
+    <title>Home</title>
     <!-- Import mdb.min.css file -->
     <link rel="stylesheet" href="css/mdb.min.css" />
 </head>

@@ -1,6 +1,6 @@
 <?php
 $iot = $_GET['iot'];
-$history = file_get_contents("https://ovl.tech-user.fr:6969/position/history/" . $iot . "/");
+$history = file_get_contents($API_link ."/position/history/" . $iot . "/");
 $parsed_history = json_decode($history);
 $extract_pos = $parsed_history->{'history'};
 
