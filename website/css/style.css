@@ -14,6 +14,14 @@ body{
     border-color: #444444 !important;
 }
 
+input{
+    color: white !important;
+}
+
+.form-label{
+    color: white !important;
+}
+
 button{
     background-color: #666666 !important;
 }

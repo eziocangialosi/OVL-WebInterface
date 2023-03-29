@@ -1,9 +1,0 @@
-Package: OVL-website
-Version: 1.0.0
-Section: base
-Priority: optional
-Architecture: all
-Depends: dependency1, dependency2
-Maintainer: Votre Nom <votre.email@example.com>
-Description: Une courte description de mon paquet
- Une description plus longue et détaillée de votre paquet.
