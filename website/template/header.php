@@ -52,7 +52,7 @@ if (isset($_SESSION['user'])) {
 <nav class="navbar navbar-expand-lg navbar-dark navbar_modify" >
   <!-- Container wrapper -->
   <div class="container-fluid">
-
+  <?php if (!isset($_SESSION['user'])) { ?>
     <!-- Navbar brand -->
     <a class="navbar-brand" href=<?php echo $Website_link ."/index.php" ?>>
     <img
@@ -62,6 +62,18 @@ if (isset($_SESSION['user'])) {
         loading="lazy"
       />  
     Home</a>
+    <?php }else{
+      ?>
+        <a class="navbar-brand" href=<?php echo $Website_link ."/iotList.php"; ?>>
+        <img
+            src=<?php echo $Website_link ."/img/OVL_Logo.png" ?>
+            class="me-2"
+            height="40"
+            loading="lazy"
+          />  
+        Trackers</a>
+      <?php
+    } ?>
 
     <!-- Toggle button -->
     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,10 +88,6 @@ if (isset($_SESSION['user'])) {
         <!-- Link -->
         <li class="nav-item">
           <a class="nav-link" href=<?php echo $Website_link ."/test_unitaire/liste.php"; ?>>Unit tests</a>
-        </li>
-        <!-- Link -->
-        <li class="nav-item">
-          <a class="nav-link" href=<?php echo $Website_link ."/iotList.php"; ?>>Trackers</a>
         </li>
         <?php } ?>
       </ul>
