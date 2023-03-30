@@ -21,19 +21,8 @@
 </head>
 
 <body>
-    <!-- Include header.php in the body -->
     <?php
-    include('template/header.php');
-    ?>
-    <!-- Add a break line before h1 -->
-    <br>
-
-    <!-- Center align h1 with Accueil text -->
-    <h1 style="text-align: center">Accueil</h1>
-
-    <!-- Include footer.php in the body -->
-    <?php
-    include('template/footer.php');
+        header('Location: https://ovl.tech-user.fr:7070/connect.php?connexion=1');
     ?>
 </body>
 
