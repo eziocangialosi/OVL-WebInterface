@@ -1,8 +1,7 @@
 <footer class="text-center text-lg-start footer_modify">
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2023 Copyright:
-    <a class="text-reset fw-bold" href=""></a>
+    <a class="text-reset fw-bold" target="_blank" href="https://github.com/eziocangialosi/OpenVehicleLocator">Link Github Project</a>
   </div>
   <!-- Copyright -->
 </footer>
