@@ -11,7 +11,7 @@ if ($parsed_history->{'error'}->{'Code'} == 0) {
     $extract_pos = json_decode($history)->{'history'};
     // HTML for creating a Bootstrap table
 ?>
-    <div class="table-responsive">
+    <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
         <table class="table table_modify container-xxl">
             <thead class="table-dark table_modify">
                 <th scope="col">Date</th>
