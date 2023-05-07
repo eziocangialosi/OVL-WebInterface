@@ -1,4 +1,4 @@
-<!-- Background image section-->
+<!-- Background color section-->
 <section class="text-center">
   <!-- Background image -->
   <div class="p-5 bg-image" style="
