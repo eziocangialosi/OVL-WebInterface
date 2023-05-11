@@ -80,18 +80,6 @@ if (isset($_SESSION['user'])) {
       <i class="fas fa-bars"></i>
     </button>
 
-   
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <?php if (isset($_SESSION['user'])) { ?>
-        <!-- Link -->
-        <li class="nav-item">
-          <a class="nav-link" href=<?php echo $Website_link ."test_unitaire/liste.php"; ?>>Unit tests</a>
-        </li>
-        <?php } ?>
-      </ul>
-
       <!-- Icons -->
       <ul class="navbar-nav d-flex flex-row me-1">
       <?php if (!isset($_SESSION['user'])) { ?>
