@@ -4,6 +4,11 @@ $history = file_get_contents($API_link ."/position/history/" . $iot . "/");
 $parsed_history = json_decode($history);
 $extract_pos = $parsed_history->{'history'};
 
+$safezone = file_get_contents($API_link ."/position/safezone/" . $iot . "/");
+$parsed_safezone = json_decode($safezone);
+
+echo $parsed_safezone->{'safezone'}->{'lat'};
+
 ?>
 
 <script type="text/javascript">
@@ -20,11 +25,11 @@ $extract_pos = $parsed_history->{'history'};
         }).addTo(map);
 
         var marker = L.marker([<?php echo $extract_pos[$pos]->{'lat'} ?>, <?php echo $extract_pos[$pos]->{'lon'} ?>]).addTo(map); //COORDS D'UN POINT SUR LA CARTE
-        L.circle([<?php echo $_COOKIE['safezone']['lat'] ?>, <?php echo $_COOKIE['safezone']['lon'] ?>], {
+        L.circle([<?php echo $parsed_safezone->{'safezone'}->{'lon'} ?>, <?php echo $parsed_safezone->{'safezone'}->{'lat'} ?>], {
             color: 'blue',
             fillColor: '#f03',
             fillOpacity: 0.5,
-            radius: 500
+            radius: <?php echo $parsed_safezone->{'safezone'}->{'diameter'} ?>
         }).addTo(map);
 
         <?php
@@ -37,11 +42,11 @@ $extract_pos = $parsed_history->{'history'};
             attribution: '© OpenStreetMap'
         }).addTo(map);
 
-        L.circle([<?php echo $_COOKIE['safezone']['lat'] ?>, <?php echo $_COOKIE['safezone']['lon'] ?>], {
+        L.circle([<?php echo $parsed_safezone->{'safezone'}->{'lon'} ?>, <?php echo $parsed_safezone->{'safezone'}->{'lat'} ?>], {
             color: 'blue',
             fillColor: '#f03',
             fillOpacity: 0.5,
-            radius: 500
+            radius: <?php echo $parsed_safezone->{'safezone'}->{'diameter'} ?>
         }).addTo(map);
 
         var latlngs = [];
