@@ -10,9 +10,6 @@ if(isset($_GET['iot']))
     $gpx_download = file_get_contents($API_link ."/position/gpx/" . $id . "/" . $id);
     $parsed_gpx_download = json_decode($gpx_download);
 
-    echo $parsed_gpx_download->{'gpx'};
-    echo $filename;
-
     // Write the content to a GPX file
     file_put_contents($filename, $parsed_gpx_download->{'gpx'});
 
@@ -28,20 +25,18 @@ if(isset($_GET['iot']))
 
         // Read the file and offer it for download
         readfile($filename);
-
+        
         // Try to delete the file
         if (unlink($filename)) {
-            echo "The file $filename was successfully deleted.";
+            //The file was successfully deleted.
         } else {
-            echo "An error occurred while trying to delete the file $filename.";
+            //An error occurred while trying to delete the file 
         }
-
-        // Terminate the script after file download and deletion
-        exit;
     } else {
-        echo "The file $filename does not exist.";
+        echo "The file ".$filename." does not exist.";
     }
-    
 }
-header('Location: '. $Website_link .'historique.php?iot='.$iot);
+
+
+//header('Location: '. $Website_link .'historique.php?iot='.$iot);
 ?>
