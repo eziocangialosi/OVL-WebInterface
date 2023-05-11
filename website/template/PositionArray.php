@@ -39,7 +39,7 @@ if ($parsed_history->{'error'}->{'Code'} == 0) {
     </div>
     <!-- "Global" and "Exporter" buttons -->
     <a href="/historique.php?iot=<?php echo $iot ?>"> <button type="button" class="btn button_modify"> Global </button> </a>
-    <a href="/historique.php?iot=<?php echo $iot ?>"> <button type="button" class="btn button_modify"> Export </button> </a>
+    <a href="php/dowload.php?iot=<?php echo $iot ?>"> <button type="button" class="btn button_modify"> Export </button> </a>
 <?php
 } else {
     echo $parsed_history->{'error'}->{'Message'};
