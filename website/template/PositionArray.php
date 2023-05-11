@@ -3,10 +3,6 @@ if ($parsed_history->{'error'}->{'Code'} == 0) {
     // Get the iot device's key from the URL
     $iot = $_GET["iot"];
     $pos = $_GET["pos"];
-    $safezone = file_get_contents($API_link . "/position/safezone/" . $iot . "/");
-    $safezone_Json = json_decode($safezone);
-    $_COOKIE['safezone']['lat'] = $safezone_Json->{'safezone'}->{'lat'};
-    $_COOKIE['safezone']['lon'] = $safezone_Json->{'safezone'}->{'lon'};
 
     $extract_pos = json_decode($history)->{'history'};
     // HTML for creating a Bootstrap table
