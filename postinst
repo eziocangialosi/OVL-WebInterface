@@ -1,8 +1,0 @@
-#!/bin/sh
-set -e
-
-# Créez le répertoire de destination s'il n'existe pas
-mkdir -p /var/www/html/OVL-Website
-
-# Copiez les fichiers du site web dans le répertoire de destination
-cp -r /usr/share/ovl-website/* /var/www/html/OVL-Website/
