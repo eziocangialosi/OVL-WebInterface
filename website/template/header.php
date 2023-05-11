@@ -29,7 +29,7 @@ if (isset($_SESSION['user'])) {
 <?php
 } else if (!isset($_SESSION['user']) and ($_SERVER['REQUEST_URI'] != "/index.php" and $_SERVER['REQUEST_URI'] != "/" and !str_contains($_SERVER['REQUEST_URI'],'/connect.php'))) {
     echo $_SERVER['REQUEST_URI'];
-    header('Location: https://ovl.tech-user.fr:7070/');
+    header('Location: '. $Website_link .'');
 }
 ?>
 
@@ -87,7 +87,7 @@ if (isset($_SESSION['user'])) {
       <?php if (isset($_SESSION['user'])) { ?>
         <!-- Link -->
         <li class="nav-item">
-          <a class="nav-link" href=<?php echo $Website_link ."/test_unitaire/liste.php"; ?>>Unit tests</a>
+          <a class="nav-link" href=<?php echo $Website_link ."test_unitaire/liste.php"; ?>>Unit tests</a>
         </li>
         <?php } ?>
       </ul>

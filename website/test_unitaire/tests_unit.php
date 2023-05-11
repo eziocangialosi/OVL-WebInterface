@@ -1,7 +1,8 @@
 <?php
+require_once('../php/initLink.php');
     function getIOT()
     {
-        $link = "https://ovl.tech-user.fr:6969/lazy/iot_list/UnToken";
+        $link = "". $API_link ."/lazy/iot_list/UnToken";
         $iot_list = file_get_contents($link);
         $iot_list_decode = json_decode($iot_list);
 
@@ -42,7 +43,7 @@
     }
     function getStatus()
     {
-        $link = "https://ovl.tech-user.fr:6969/lazy/status_list/42/";
+        $link = "". $API_link ."/lazy/status_list/42/";
         $stat_list = file_get_contents($link);
         $stat_list_decode = json_decode($stat_list);
 
@@ -81,7 +82,7 @@
     }
     function getPos()
     {
-        $link = "https://ovl.tech-user.fr:6969/lazy/position/history/42/";
+        $link = "". $API_link ."/lazy/position/history/42/";
         $historique = file_get_contents($link);
         $historique_decode = json_decode($historique);
 
@@ -121,7 +122,7 @@
     }
     function getUser()
     {
-        $link = "https://ovl.tech-user.fr:6969/lazy/user/test@gmail.com/test123";
+        $link = "". $API_link ."/lazy/user/test@gmail.com/test123";
         //Get user data from the API using email and password
         $users_verif = file_get_contents($link);
         $users_verif_decode = json_decode($users_verif);
@@ -161,7 +162,7 @@
     }
     function getPosNow()
     {
-        $link = "https://ovl.tech-user.fr:6969/lazy/position/now/1/";
+        $link = "". $API_link ."/lazy/position/now/1/";
         //Get user data from the API using email and password
         $pos_list = file_get_contents($link);
         $pos_list_decode = json_decode($pos_list);

@@ -20,17 +20,17 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             $_SESSION["user"]["time"] = time();
             $_SESSION["user"]["token"] = $parsed_users_verif->{'user'};
             //Redirect to iotList.php with "connexion=0" flag
-            header('Location: https://ovl.tech-user.fr:7070/iotList.php?connexion=0');
+            header('Location: '. $Website_link .'iotList.php?connexion=0');
         } elseif ($parsed_users_verif->{'error'}->{'Code'} == "30") {
             unset($_SESSION["user"]);
             //Redirect to connect.php with "connexion=1" flag
-            header('Location: https://ovl.tech-user.fr:7070/connect.php?connexion=1');
+            header('Location: '. $Website_link .'connect.php?connexion=1');
         } elseif ($parsed_users_verif->{'error'}->{'Code'} == "32") {
             unset($_SESSION["user"]);
             //Redirect to connect.php with "connexion=2" flag
-            header('Location: https://ovl.tech-user.fr:7070/connect.php?connexion=2');
+            header('Location: '. $Website_link .'connect.php?connexion=2');
         }
     }else{
-        header('Location: https://ovl.tech-user.fr:7070/connect.php?connexion=4');
+        header('Location: '. $Website_link .'connect.php?connexion=4');
     }
 }

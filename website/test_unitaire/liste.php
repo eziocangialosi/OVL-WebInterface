@@ -1,5 +1,6 @@
 <?php
 // include functions.php file
+require_once('../php/initLink.php');
 require_once('tests_unit.php');
 ?>
 <!DOCTYPE html>
@@ -10,7 +11,7 @@ require_once('tests_unit.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Include style.css file for general styling -->
-    <link href="https://ovl.tech-user.fr:7070/css/style.css" rel="stylesheet">
+    <link href="<?php echo $Website_link ?>css/style.css" rel="stylesheet">
     <!-- Import bootstrap css from cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -21,7 +22,7 @@ require_once('tests_unit.php');
     <!-- Set title of the page -->
     <title>Test unitaires</title>
     <!-- Import mdb.min.css file -->
-    <link rel="stylesheet" href="https://ovl.tech-user.fr:7070/css/mdb.min.css" />
+    <link rel="stylesheet" href="<?php echo $Website_link ?>css/mdb.min.css" />
 </head>
 
 <body>
