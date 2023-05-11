@@ -38,5 +38,5 @@ if(isset($_GET['iot']))
 }
 
 
-//header('Location: '. $Website_link .'historique.php?iot='.$iot);
+header('Location: '. $Website_link .'historique.php?iot='.$iot);
 ?>
