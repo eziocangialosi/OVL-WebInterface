@@ -6,8 +6,8 @@ $filename = "map.gpx";
 
 if(isset($_GET['iot']))
 {
-    $id = $_GET['iot'];
-    $gpx_download = file_get_contents($API_link ."/position/gpx/" . $id . "/" . $id);
+    $iot = $_GET['iot'];
+    $gpx_download = file_get_contents($API_link ."/position/gpx/" . $iot . "/" . $iot);
     $parsed_gpx_download = json_decode($gpx_download);
 
     // Write the content to a GPX file
@@ -32,11 +32,9 @@ if(isset($_GET['iot']))
         } else {
             //An error occurred while trying to delete the file 
         }
+        exit;
     } else {
         echo "The file ".$filename." does not exist.";
     }
 }
-
-
-header('Location: '. $Website_link .'historique.php?iot='.$iot);
 ?>
