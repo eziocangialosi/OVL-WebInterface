@@ -6,7 +6,6 @@ $extract_pos = $parsed_history->{'history'};
 
 $safezone = file_get_contents($API_link ."/position/safezone/" . $iot . "/");
 $parsed_safezone = json_decode($safezone);
-
 ?>
 
 <script type="text/javascript">
