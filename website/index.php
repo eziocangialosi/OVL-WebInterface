@@ -22,7 +22,7 @@
 
 <body>
     <?php
-        header('Location: https://ovl.tech-user.fr:7070/connect.php');
+        header('Location: '. $Website_link .'connect.php');
     ?>
 </body>
 

@@ -41,6 +41,6 @@ if ($status != 200) {
 
 // Close cURL and redirect
 curl_close($curl);
-header('Location: https://ovl.tech-user.fr:7070/historique.php?iot=' . $iot . '&modif=1#param');
+header('Location: '. $Website_link .'/historique.php?iot=' . $iot . '&modif=1#param');
 
 ?>

@@ -29,7 +29,7 @@ if (isset($_SESSION['user'])) {
 <?php
 } else if (!isset($_SESSION['user']) and ($_SERVER['REQUEST_URI'] != "/index.php" and $_SERVER['REQUEST_URI'] != "/" and !str_contains($_SERVER['REQUEST_URI'],'/connect.php'))) {
     echo $_SERVER['REQUEST_URI'];
-    header('Location: https://ovl.tech-user.fr:7070/');
+    header('Location: '. $Website_link .'');
 }
 ?>
 
@@ -79,18 +79,6 @@ if (isset($_SESSION['user'])) {
     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
-
-   
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <?php if (isset($_SESSION['user'])) { ?>
-        <!-- Link -->
-        <li class="nav-item">
-          <a class="nav-link" href=<?php echo $Website_link ."/test_unitaire/liste.php"; ?>>Unit tests</a>
-        </li>
-        <?php } ?>
-      </ul>
 
       <!-- Icons -->
       <ul class="navbar-nav d-flex flex-row me-1">

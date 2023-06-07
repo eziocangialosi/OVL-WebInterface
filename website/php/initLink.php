@@ -1,4 +1,4 @@
 <?php
-    $API_link = "https://example.com";
-    $Website_link = "https://example.com/";
-?>
+    $API_link = "https://api.ovl.tech-user.fr";
+    $Website_link = "https://ovl.tech-user.fr/";
+    ?>

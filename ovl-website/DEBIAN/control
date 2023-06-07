@@ -7,4 +7,4 @@ Essential: no
 Depends: apache2
 Maintainer: Bennane <votre@email.com>
 Description: OVL Website
- Un exemple de site web pour démontrer comment créer un package .deb.
+ Open Vehicule Locator Website

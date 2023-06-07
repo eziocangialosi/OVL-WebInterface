@@ -17,27 +17,20 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         //Check the response status code and handle accordingly
         if ($parsed_users_verif->{'error'}->{'Code'} == "0") {
             unset($_SESSION["Connexion"]);
-            //Set successful connexion message
-            $_SESSION["Connexion"] = "Connexion réussie";
-            $_SESSION["user"]["email"] = $_POST['email'];
             $_SESSION["user"]["time"] = time();
             $_SESSION["user"]["token"] = $parsed_users_verif->{'user'};
             //Redirect to iotList.php with "connexion=0" flag
-            header('Location: https://ovl.tech-user.fr:7070/iotList.php?connexion=0');
+            header('Location: '. $Website_link .'iotList.php?connexion=0');
         } elseif ($parsed_users_verif->{'error'}->{'Code'} == "30") {
             unset($_SESSION["user"]);
-            //Set wrong password message
-            $_SESSION["Connexion"] = "Mot de Passe incorect";
             //Redirect to connect.php with "connexion=1" flag
-            header('Location: https://ovl.tech-user.fr:7070/connect.php?connexion=1');
+            header('Location: '. $Website_link .'connect.php?connexion=1');
         } elseif ($parsed_users_verif->{'error'}->{'Code'} == "32") {
             unset($_SESSION["user"]);
-            //Set non-registered user message
-            $_SESSION["Connexion"] = "Compte non inscrit";
             //Redirect to connect.php with "connexion=2" flag
-            header('Location: https://ovl.tech-user.fr:7070/connect.php?connexion=2');
+            header('Location: '. $Website_link .'connect.php?connexion=2');
         }
     }else{
-        header('Location: https://ovl.tech-user.fr:7070/connect.php?connexion=4');
+        header('Location: '. $Website_link .'connect.php?connexion=4');
     }
 }
